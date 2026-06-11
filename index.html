@@ -1,40 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fe y Decoración</title>
+    <title>Fe y Decoración | Bertart Ceramics</title>
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
-    <header class="hero">
-        <div class="container">
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="#inicio" class="logo">
+                <img src="images/logo.jpeg" alt="Bertart Ceramics">
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header id="inicio" class="hero">
+
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="videos/vid_1.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <img src="images/logo.jpeg" alt="Bertart Ceramics" class="hero-logo">
+
             <h1>Fe y Decoración</h1>
+
             <p>
-                Piezas que inspiran, decoran y transmiten significado.
+                Piezas artesanales elaboradas con pasión,
+                detalle y significado.
             </p>
 
-            <a href="#contacto" class="btn">
-                Contáctanos
+            <a href="#productos" class="btn">
+                Descubrir Colección
             </a>
+
         </div>
+
     </header>
 
-    <section class="section">
-        <div class="container">
-            <h2>Quiénes Somos</h2>
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="section">
 
-            <p class="center-text">
-                Somos una marca dedicada a la creación y comercialización
-                de artículos decorativos y religiosos elaborados con detalle,
-                calidad y pasión.
-            </p>
+        <div class="container about-container">
+
+            <div class="about-image">
+                <img src="images/mi_foto.png" alt="Bertart Ceramics">
+            </div>
+
+            <div class="about-text">
+
+                <h2>Nuestra Historia</h2>
+
+                <p>
+                    En Bertart Ceramics cada pieza nace del amor por el arte,
+                    la fe y el trabajo artesanal.
+                </p>
+
+                <p>
+                    Nos dedicamos a crear productos decorativos y religiosos
+                    elaborados cuidadosamente, buscando transmitir belleza,
+                    inspiración y significado en cada detalle.
+                </p>
+
+                <p>
+                    Nuestro propósito es ofrecer piezas únicas que acompañen
+                    espacios, momentos especiales y expresiones de fe.
+                </p>
+
+            </div>
+
         </div>
+
     </section>
 
-    <section class="section alt-bg">
+    <!-- PRODUCTOS -->
+    <section id="productos" class="section alt-bg">
+
         <div class="container">
+
             <h2>Nuestros Productos</h2>
 
             <div class="cards">
@@ -42,13 +104,13 @@
                 <div class="card">
                     <div class="placeholder"></div>
                     <h3>Decoración Religiosa</h3>
-                    <p>Imágenes, cuadros y artículos especiales.</p>
+                    <p>Imágenes, figuras y artículos para espacios de fe.</p>
                 </div>
 
                 <div class="card">
                     <div class="placeholder"></div>
                     <h3>Cerámica Artesanal</h3>
-                    <p>Piezas únicas para decorar cualquier espacio.</p>
+                    <p>Piezas elaboradas cuidadosamente con acabados únicos.</p>
                 </div>
 
                 <div class="card">
@@ -58,37 +120,51 @@
                 </div>
 
             </div>
+
         </div>
+
     </section>
 
+    <!-- REDES -->
     <section class="section">
+
         <div class="container">
+
             <h2>Síguenos</h2>
 
             <p class="center-text">
-                Instagram: @feydecoracion
+                Próximamente compartiremos más contenido en nuestras redes sociales.
             </p>
+
         </div>
+
     </section>
 
+    <!-- CONTACTO -->
     <section id="contacto" class="section contact">
+
         <div class="container">
+
             <h2>Contáctanos</h2>
 
             <p>
-                Estamos disponibles para resolver tus dudas y ayudarte a
-                encontrar el producto ideal.
+                Estamos listos para ayudarte a encontrar la pieza ideal.
             </p>
 
             <a href="#" class="btn">
-                WhatsApp
+                Escríbenos por WhatsApp
             </a>
+
         </div>
+
     </section>
 
     <footer>
-        <p>© 2026 Fe y Decoración</p>
+        <p>© 2026 Bertart Ceramics - Fe y Decoración</p>
     </footer>
 
+    <script src="js/main.js"></script>
+
 </body>
+
 </html>
