@@ -1,22 +1,24 @@
-window.addEventListener("scroll", () => {
+const navbar = document.querySelector(".navbar");
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelectorAll(".nav-links a");
 
-    const navbar = document.querySelector(".navbar");
+const updateNavbar = () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 40);
+};
 
-    if(window.scrollY > 50){
+const closeMenu = () => {
+    navbar.classList.remove("nav-open");
+    navToggle.setAttribute("aria-expanded", "false");
+};
 
-        navbar.style.background =
-        "rgba(255,255,255,0.98)";
+window.addEventListener("scroll", updateNavbar);
+updateNavbar();
 
-        navbar.style.boxShadow =
-        "0 5px 20px rgba(0,0,0,.08)";
+navToggle.addEventListener("click", () => {
+    const isOpen = navbar.classList.toggle("nav-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+});
 
-    }else{
-
-        navbar.style.background =
-        "rgba(255,255,255,.95)";
-
-        navbar.style.boxShadow =
-        "0 2px 15px rgba(0,0,0,.05)";
-    }
-
+navLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
 });
