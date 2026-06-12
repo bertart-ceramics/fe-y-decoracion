@@ -1,16 +1,191 @@
-<section id="productos">
-    <h2>Catálogo</h2>
+<!DOCTYPE html>
+<html lang="es">
 
-    <div class="producto">
-        <img src="images/producto1.jpg">
-        <h3>Producto 1</h3>
-        <p>Descripción</p>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | Bertart Ceramics</title>
 
-    <div class="producto">
-        <img src="images/producto2.jpg">
-        <h3>Producto 2</h3>
-        <p>Descripción</p>
-    </div>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
 
-</section>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Bertart Ceramics">
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <section class="catalogo">
+
+        <div class="catalogo-header">
+
+            <span class="section-kicker">
+                Colección
+            </span>
+
+            <h1>Catálogo Bertart Ceramics</h1>
+
+            <p>
+                Piezas religiosas y decorativas elaboradas artesanalmente.
+            </p>
+
+        </div>
+
+        <div class="filtros">
+
+            <button class="filtro-btn" data-filtro="todos">
+                Todos
+            </button>
+
+            <button class="filtro-btn" data-filtro="religiosa">
+                Arte Sacro
+            </button>
+
+            <button class="filtro-btn" data-filtro="decorativa">
+                Decoración Artística
+            </button>
+
+        </div>
+
+        <div class="productos-grid">
+
+            <!-- RELIGIOSOS -->
+
+            <article class="producto religiosa">
+                <img src="productos-religiosas/Carmen 40cm.png" alt="">
+                <div class="producto-info">
+                    <h3>Virgen del Carmen</h3>
+                    <p>40 cm</p>
+                    <div class="precio">$80.000</div>
+                </div>
+            </article>
+
+            <article class="producto religiosa">
+                <img src="productos-religiosas/Fátima 30cm.png" alt="">
+                <div class="producto-info">
+                    <h3>Virgen de Fátima</h3>
+                    <p>30 cm</p>
+                    <div class="precio">$40.000</div>
+                </div>
+            </article>
+
+            <article class="producto religiosa">
+                <img src="productos-religiosas/Guadalupe 60cm.png" alt="">
+                <div class="producto-info">
+                    <h3>Virgen de Guadalupe</h3>
+                    <p>60 cm</p>
+                    <div class="precio">$150.000</div>
+                </div>
+            </article>
+
+            <article class="producto religiosa">
+                <img src="productos-religiosas/Milagrosa 40cm.png" alt="">
+                <div class="producto-info">
+                    <h3>Virgen Milagrosa</h3>
+                    <p>40 cm</p>
+                    <div class="precio">$80.000</div>
+                </div>
+            </article>
+
+            <article class="producto religiosa">
+                <img src="productos-religiosas/Rosario 40cm.png" alt="">
+                <div class="producto-info">
+                    <h3>Virgen del Rosario</h3>
+                    <p>40 cm</p>
+                    <div class="precio">$80.000</div>
+                </div>
+            </article>
+
+            <article class="producto religiosa">
+                <img src="productos-religiosas/San Jose 40cm.png" alt="">
+                <div class="producto-info">
+                    <h3>San José</h3>
+                    <p>40 cm</p>
+                    <div class="precio">$80.000</div>
+                </div>
+            </article>
+
+            <article class="producto religiosa">
+                <img src="productos-religiosas/Santa Marta 40cm.png" alt="">
+                <div class="producto-info">
+                    <h3>Santa Marta</h3>
+                    <p>40 cm</p>
+                    <div class="precio">$80.000</div>
+                </div>
+            </article>
+
+            <!-- DECORATIVOS -->
+
+            <article class="producto decorativa">
+                <img src="productos-decorativas/Loro Cuadro.png" alt="">
+                <div class="producto-info">
+                    <h3>Loro Decorativo</h3>
+                    <div class="precio">$150.000</div>
+                </div>
+            </article>
+
+            <article class="producto decorativa">
+                <img src="productos-decorativas/Perro.png" alt="">
+                <div class="producto-info">
+                    <h3>Figura Perro</h3>
+                    <div class="precio">$30.000</div>
+                </div>
+            </article>
+
+            <article class="producto decorativa">
+                <img src="productos-decorativas/Up.png" alt="">
+                <div class="producto-info">
+                    <h3>Figura UP</h3>
+                    <div class="precio">$150.000</div>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        const botones = document.querySelectorAll('.filtro-btn');
+        const productos = document.querySelectorAll('.producto');
+
+        botones.forEach(btn => {
+
+            btn.addEventListener('click', () => {
+
+                const filtro = btn.dataset.filtro;
+
+                productos.forEach(producto => {
+
+                    if (
+                        filtro === 'todos' ||
+                        producto.classList.contains(filtro)
+                    ) {
+                        producto.style.display = 'block';
+                    }
+                    else {
+                        producto.style.display = 'none';
+                    }
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
