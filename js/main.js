@@ -5,19 +5,18 @@ window.addEventListener("scroll", () => {
     if(window.scrollY > 50){
 
         navbar.style.background =
-        "rgba(255,255,255,0.92)";
+        "rgba(255,255,255,0.98)";
 
         navbar.style.boxShadow =
-        "0 8px 25px rgba(0,0,0,.08)";
+        "0 5px 20px rgba(0,0,0,.08)";
 
-    }
-    else{
+    }else{
 
         navbar.style.background =
-        "rgba(255,255,255,.75)";
+        "rgba(255,255,255,.95)";
 
         navbar.style.boxShadow =
-        "none";
+        "0 2px 15px rgba(0,0,0,.05)";
     }
 
 });

@@ -1,3 +1,7 @@
+/* =========================
+   RESET
+========================= */
+
 *{
     margin:0;
     padding:0;
@@ -20,7 +24,10 @@ body{
     margin:auto;
 }
 
-/* NAVBAR */
+
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar{
     position:fixed;
@@ -28,11 +35,12 @@ body{
     width:100%;
     z-index:1000;
 
-    background:rgba(255,255,255,.95);
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(15px);
 
-    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(0,0,0,.05);
 
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
 .nav-container{
@@ -43,7 +51,7 @@ body{
     justify-content:space-between;
     align-items:center;
 
-    padding:10px 30px;
+    padding:12px 30px;
 }
 
 .logo img{
@@ -51,36 +59,43 @@ body{
 }
 
 .nav-links{
-    list-style:none;
     display:flex;
-    gap:30px;
+    gap:35px;
+    list-style:none;
 }
 
 .nav-links a{
     text-decoration:none;
     color:#7a4c3e;
     font-weight:600;
+    transition:.3s;
 }
 
 .nav-links a:hover{
     color:#9a9c20;
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
+    position:relative;
+    overflow:hidden;
+
     min-height:100vh;
 
     display:flex;
     align-items:center;
 
+    padding-top:100px;
+
     background:linear-gradient(
         135deg,
-        #f5efe8,
+        #f8f3ee,
         #efe4d7
     );
-
-    padding-top:100px;
 }
 
 .hero-container{
@@ -90,71 +105,144 @@ body{
 
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:60px;
+    gap:80px;
     align-items:center;
 }
 
+.hero-text{
+    animation:fadeLeft 1s ease;
+}
+
 .brand{
+    display:block;
+
+    margin-bottom:15px;
+
     color:#9a9c20;
-    font-weight:bold;
-    letter-spacing:2px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
 }
 
 .hero h1{
-    font-size:4rem;
     color:#7a4c3e;
-    margin:15px 0;
+
+    font-size:5rem;
+    line-height:1.05;
+
+    margin-bottom:25px;
 }
 
 .hero p{
     font-size:1.2rem;
     line-height:1.8;
+    max-width:550px;
+}
+
+.hero-image{
+    animation:fadeRight 1.2s ease;
 }
 
 .hero-image img{
     width:100%;
-    border-radius:25px;
+
+    border-radius:30px;
 
     box-shadow:
-    0 15px 40px rgba(0,0,0,.15);
+        0 25px 50px rgba(0,0,0,.15);
+
+    animation:floatImage 6s ease-in-out infinite;
 }
 
-/* BOTON */
+
+/* =========================
+   DECORACIÓN HERO
+========================= */
+
+.blob{
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(100px);
+    opacity:.18;
+
+    pointer-events:none;
+}
+
+.blob1{
+    width:350px;
+    height:350px;
+
+    top:100px;
+    left:-120px;
+
+    background:#9a9c20;
+}
+
+.blob2{
+    width:400px;
+    height:400px;
+
+    right:-120px;
+    bottom:50px;
+
+    background:#7a4c3e;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
 
 .btn{
     display:inline-block;
 
-    margin-top:30px;
+    margin-top:35px;
+    padding:14px 34px;
 
-    padding:14px 32px;
+    border-radius:40px;
+
+    text-decoration:none;
+    font-weight:600;
 
     background:#7a4c3e;
     color:white;
 
-    text-decoration:none;
+    box-shadow:
+        0 10px 25px rgba(122,76,62,.25);
 
-    border-radius:40px;
+    transition:.3s;
 }
 
 .btn:hover{
-    opacity:.9;
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 18px 35px rgba(122,76,62,.35);
 }
 
-/* SECCIONES */
+
+/* =========================
+   SECCIONES
+========================= */
 
 .section{
-    padding:100px 0;
+    padding:110px 0;
 }
 
 .section h2{
     text-align:center;
     margin-bottom:30px;
+
     color:#7a4c3e;
 }
 
 .center-text{
-    text-align:center;
     max-width:900px;
+
+    text-align:center;
+
     margin:0 auto 20px;
 }
 
@@ -162,10 +250,13 @@ body{
     background:#f2ece5;
 }
 
-/* VIDEO */
+
+/* =========================
+   VIDEO
+========================= */
 
 .video-container{
-    max-width:500px;
+    max-width:600px;
     margin:auto;
 }
 
@@ -174,7 +265,10 @@ body{
     border-radius:20px;
 }
 
-/* PRODUCTOS */
+
+/* =========================
+   PRODUCTOS
+========================= */
 
 .cards{
     display:grid;
@@ -184,12 +278,22 @@ body{
 
 .card{
     background:white;
-    padding:30px;
+
+    padding:35px;
 
     border-radius:20px;
 
     box-shadow:
-    0 5px 20px rgba(0,0,0,.08);
+        0 5px 20px rgba(0,0,0,.08);
+
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.12);
 }
 
 .card h3{
@@ -197,22 +301,79 @@ body{
     margin-bottom:15px;
 }
 
-/* CONTACTO */
+
+/* =========================
+   CONTACTO
+========================= */
 
 .contact{
     text-align:center;
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     background:#2f2f2f;
     color:white;
+
     text-align:center;
+
     padding:25px;
 }
 
-/* RESPONSIVE */
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes fadeLeft{
+
+    from{
+        opacity:0;
+        transform:translateX(-50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes fadeRight{
+
+    from{
+        opacity:0;
+        transform:translateX(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes floatImage{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:768px){
 
@@ -222,7 +383,11 @@ footer{
     }
 
     .hero h1{
-        font-size:2.8rem;
+        font-size:3rem;
+    }
+
+    .hero p{
+        max-width:100%;
     }
 
     .nav-container{
@@ -232,5 +397,13 @@ footer{
     .nav-links{
         gap:15px;
         margin-top:10px;
+    }
+
+    .logo img{
+        height:50px;
+    }
+
+    .blob{
+        display:none;
     }
 }
