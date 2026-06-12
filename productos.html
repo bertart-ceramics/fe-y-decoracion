@@ -9,22 +9,37 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/products.css">
 </head>
-
+<script src="js/main.js"></script>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-container">
+<nav class="navbar">
+    <div class="nav-container">
 
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Bertart Ceramics">
-            </a>
+        <a href="index.html" class="logo" aria-label="Bertart Ceramics">
+            <img src="images/logo.png" alt="Bertart Ceramics">
+        </a>
 
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-            </ul>
+        <button class="nav-toggle" type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="nav-links">
 
-        </div>
-    </nav>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html#inicio">Inicio</a></li>
+            <li><a href="index.html#nosotros">Nosotros</a></li>
+            <li><a href="index.html#proceso">Proceso</a></li>
+            <li><a href="productos.html" class="active">Productos</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+
+    </div>
+</nav>
 
     <section class="catalogo">
 
@@ -63,91 +78,131 @@
             <!-- RELIGIOSOS -->
 
             <article class="producto religiosa">
-                <img src="productos-religiosas/Carmen 40cm.png" alt="">
+                <img src="productos-religiosas/Carmen 40cm.png" alt="Virgen del Carmen">
                 <div class="producto-info">
                     <h3>Virgen del Carmen</h3>
                     <p>40 cm</p>
                     <div class="precio">$80.000</div>
+                    <a href="https://wa.me/573218403862?text=Hola,%20me%20interesa%20la%20Virgen%20del%20Carmen%20(40%20cm)"
+                        class="comprar-btn" target="_blank" rel="noopener">
+                        Comprar ahora
+                    </a>
                 </div>
             </article>
 
             <article class="producto religiosa">
-                <img src="productos-religiosas/Fátima 30cm.png" alt="">
+                <img src="productos-religiosas/Fátima 30cm.png" alt="Virgen de Fátima">
                 <div class="producto-info">
                     <h3>Virgen de Fátima</h3>
                     <p>30 cm</p>
                     <div class="precio">$40.000</div>
+                    <a href="https://wa.me/573218403862?text=Hola,%20me%20interesa%20la%20Virgen%20de%20F%C3%A1tima%20(30%20cm)"
+                        class="comprar-btn" target="_blank" rel="noopener">
+                        Comprar ahora
+                    </a>
                 </div>
             </article>
 
             <article class="producto religiosa">
-                <img src="productos-religiosas/Guadalupe 60cm.png" alt="">
+                <img src="productos-religiosas/Guadalupe 60cm.png" alt="Virgen de Guadalupe">
                 <div class="producto-info">
                     <h3>Virgen de Guadalupe</h3>
                     <p>60 cm</p>
                     <div class="precio">$150.000</div>
+                    <a href="https://wa.me/573218403862?text=Hola,%20me%20interesa%20la%20Virgen%20de%20Guadalupe%20(60%20cm)"
+                        class="comprar-btn" target="_blank" rel="noopener">
+                        Comprar ahora
+                    </a>
                 </div>
             </article>
 
             <article class="producto religiosa">
-                <img src="productos-religiosas/Milagrosa 40cm.png" alt="">
+                <img src="productos-religiosas/Milagrosa 40cm.png" alt="Virgen Milagrosa">
                 <div class="producto-info">
                     <h3>Virgen Milagrosa</h3>
                     <p>40 cm</p>
                     <div class="precio">$80.000</div>
+                    <a href="https://wa.me/573218403862?text=Hola,%20me%20interesa%20la%20Virgen%20Milagrosa%20(40%20cm)"
+                        class="comprar-btn" target="_blank" rel="noopener">
+                        Comprar ahora
+                    </a>
                 </div>
             </article>
 
             <article class="producto religiosa">
-                <img src="productos-religiosas/Rosario 40cm.png" alt="">
+                <img src="productos-religiosas/Rosario 40cm.png" alt="Virgen del Rosario">
                 <div class="producto-info">
                     <h3>Virgen del Rosario</h3>
                     <p>40 cm</p>
                     <div class="precio">$80.000</div>
+                    <a href="https://wa.me/573218403862?text=Hola,%20me%20interesa%20la%20Virgen%20del%20Rosario%20(40%20cm)"
+                        class="comprar-btn" target="_blank" rel="noopener">
+                        Comprar ahora
+                    </a>
                 </div>
             </article>
 
             <article class="producto religiosa">
-                <img src="productos-religiosas/San Jose 40cm.png" alt="">
+                <img src="productos-religiosas/San Jose 40cm.png" alt="San José">
                 <div class="producto-info">
                     <h3>San José</h3>
                     <p>40 cm</p>
                     <div class="precio">$80.000</div>
+                    <a href="https://wa.me/573218403862?text=Hola,%20me%20interesa%20la%20figura%20de%20San%20Jos%C3%A9%20(40%20cm)"
+                        class="comprar-btn" target="_blank" rel="noopener">
+                        Comprar ahora
+                    </a>
                 </div>
             </article>
 
             <article class="producto religiosa">
-                <img src="productos-religiosas/Santa Marta 40cm.png" alt="">
+                <img src="productos-religiosas/Santa Marta 40cm.png" alt="Santa Marta">
                 <div class="producto-info">
                     <h3>Santa Marta</h3>
                     <p>40 cm</p>
                     <div class="precio">$80.000</div>
+                    <a href="https://wa.me/573218403862?text=Hola,%20me%20interesa%20la%20figura%20de%20Santa%20Marta%20(40%20cm)"
+                        class="comprar-btn" target="_blank" rel="noopener">
+                        Comprar ahora
+                    </a>
                 </div>
             </article>
 
             <!-- DECORATIVOS -->
 
             <article class="producto decorativa">
-                <img src="productos-decorativas/Loro Cuadro.png" alt="">
+                <img src="productos-decorativas/Loro Cuadro.png" alt="Loro Decorativo">
                 <div class="producto-info">
                     <h3>Loro Decorativo</h3>
                     <div class="precio">$150.000</div>
+                    <a href="https://wa.me/573218403862?text=Hola,%20me%20interesa%20el%20Loro%20Decorativo"
+                        class="comprar-btn" target="_blank" rel="noopener">
+                        Comprar ahora
+                    </a>
                 </div>
             </article>
 
             <article class="producto decorativa">
-                <img src="productos-decorativas/Perro.png" alt="">
+                <img src="productos-decorativas/Perro.png" alt="Figura Perro">
                 <div class="producto-info">
                     <h3>Figura Perro</h3>
                     <div class="precio">$30.000</div>
+                    <a href="https://wa.me/573218403862?text=Hola,%20me%20interesa%20la%20Figura%20Perro"
+                        class="comprar-btn" target="_blank" rel="noopener">
+                        Comprar ahora
+                    </a>
                 </div>
             </article>
 
             <article class="producto decorativa">
-                <img src="productos-decorativas/Up.png" alt="">
+                <img src="productos-decorativas/Up.png" alt="Figura UP">
                 <div class="producto-info">
                     <h3>Figura UP</h3>
                     <div class="precio">$150.000</div>
+                    <a href="https://wa.me/573218403862?text=Hola,%20me%20interesa%20la%20Figura%20UP"
+                        class="comprar-btn" target="_blank" rel="noopener">
+                        Comprar ahora
+                    </a>
                 </div>
             </article>
 

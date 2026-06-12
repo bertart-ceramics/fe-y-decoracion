@@ -749,3 +749,13 @@ footer{
         padding:20px;
     }
 }
+.nav-links a.active {
+    color: #fff;
+    font-weight: 700;
+    background: var(--clay);
+}
+
+.nav-links a.active:hover {
+    background: var(--clay);
+    color: #fff;
+}
